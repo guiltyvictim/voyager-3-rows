@@ -2,6 +2,7 @@
 #include "version.h"
 #define MOON_LED_LEVEL LED_LEVEL
 #define ML_SAFE_RANGE SAFE_RANGE
+#include "features/achordion.h"
 
 enum custom_keycodes {
   RGB_SLD = ML_SAFE_RANGE,
@@ -158,6 +159,8 @@ bool rgb_matrix_indicators_user(void) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  if (!process_achordion(keycode, record)) { return false; }
+
   switch (keycode) {
 
     case RGB_SLD:
@@ -171,3 +174,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 
 
+void matrix_scan_user(void) {
+  achordion_task();
+}
+
+
+
+const key_override_t delete_key_override = ko_make_basic(MOD_MASK_SHIFT, LT(5,KC_BSPC), KC_DEL);
+
+// This globally defines all key overrides to be used
+const key_override_t **key_overrides = (const key_override_t *[]){
+	&delete_key_override
+};
