@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     QK_MAGIC_TOGGLE_CTL_GUI,          KC_EXLM,        KC_AT,          KC_HASH,        KC_DLR,         KC_PERC,                                        KC_PLUS,        KC_7,           KC_8,           KC_9,           KC_NO,          KC_NO,          
     TO(6),          KC_CIRC,        KC_AMPR,        KC_ASTR,        KC_KP_DOT,      KC_GRAVE,                                       KC_MINUS,       KC_4,           KC_5,           KC_6,           KC_0,           KC_NO,          
     TO(1),          KC_NO,          KC_NO,          KC_NUBS,        KC_NONUS_HASH,  KC_NO,                                          KC_EQUAL,       KC_1,           KC_2,           KC_3,           KC_TRANSPARENT, KC_NO,          
-                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 LALT(LGUI(LCTL(LSFT(KC_BSPC)))),TD(DANCE_0)
+                                                    KC_TRANSPARENT, KC_TRANSPARENT,                                 LALT(LGUI(LCTL(LSFT(KC_SPACE)))),TD(DANCE_0)
   ),
   [3] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO,          KC_NO,          KC_F4,          KC_F5,          KC_F6,          KC_F7,                                          KC_F22,         KC_F19,         KC_F20,         KC_F21,         KC_NO,          KC_NO,          
     KC_NO,          KC_NO,          KC_F1,          KC_F2,          KC_F3,          KC_F8,                                          ALL_T(KC_F23),  MT(MOD_LSFT, KC_F16),MT(MOD_LGUI, KC_F17),MT(MOD_LALT, KC_F18),KC_LEFT_CTRL,   KC_NO,          
     KC_NO,          KC_NO,          KC_F10,         KC_F11,         KC_F12,         KC_F9,                                          KC_F24,         KC_F13,         MEH_T(KC_F14),  KC_F15,         KC_NO,          KC_NO,          
-                                                    LALT(LGUI(LCTL(LSFT(KC_SPACE)))),LALT(LCTL(LSFT(KC_SPACE))),                                KC_TRANSPARENT, KC_TRANSPARENT
+                                                    LALT(LCTL(LSFT(KC_ENTER))),LALT(LGUI(LCTL(LSFT(KC_ENTER)))),                                KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [6] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
