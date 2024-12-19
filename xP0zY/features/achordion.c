@@ -345,7 +345,6 @@ __attribute__((weak)) uint16_t achordion_timeout(uint16_t tap_hold_keycode) {
     case LT(3,KC_TAB):
     case LT(5,KC_BSPC):
     case LT(4,KC_SPACE):
-    case LALT(LGUI(LCTL(LSFT(KC_SPACE))))):
       return 0;  // Bypass Achordion for these keys.
   }
   return 500;
