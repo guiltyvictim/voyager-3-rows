@@ -232,9 +232,11 @@ void matrix_scan_user(void) {
 
 
 const key_override_t delete_key_override = ko_make_basic(MOD_MASK_SHIFT, LT(5,KC_BSPC), KC_DEL);
+const key_override_t double_quote_override = ko_make_basic(MOD_MASK_SHIFT, KC_QUOTE, KC_DOUBLE_QUOTE);
 
 // This globally defines all key overrides to be used
 const key_override_t **key_overrides = (const key_override_t *[]){
 	&delete_key_override,
+	&double_quote_override,
 	NULL // Null terminate the array of overrides!
 };
