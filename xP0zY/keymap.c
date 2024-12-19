@@ -5,7 +5,6 @@
 
 enum custom_keycodes {
   RGB_SLD = ML_SAFE_RANGE,
-  MAC_LOCK,
 };
 
 
@@ -19,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,                                           KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLS,        
     KC_ESCAPE,      MT(MOD_LCTL, KC_A),MT(MOD_LALT, KC_S),MT(MOD_LGUI, KC_D),MT(MOD_LSFT, KC_F),ALL_T(KC_G),                                    ALL_T(KC_H),    MT(MOD_LSFT, KC_J),MT(MOD_LGUI, KC_K),MT(MOD_LALT, KC_L),MT(MOD_LCTL, KC_SCLN),KC_QUOTE,       
-    CW_TOGG,        KC_Z,           KC_X,           MEH_T(KC_C),    KC_V,           KC_B,                                           KC_N,           KC_M,           MEH_T(KC_COMMA),KC_DOT,         KC_SLASH,       MAC_LOCK,       
+    CW_TOGG,        KC_Z,           KC_X,           MEH_T(KC_C),    KC_V,           KC_B,                                           KC_N,           KC_M,           MEH_T(KC_COMMA),KC_DOT,         KC_SLASH,       KC_SCRL,        
                                                     LT(2,KC_ENTER), LT(3,KC_TAB),                                   LT(5,KC_BSPC),  LT(4,KC_SPACE)
   ),
   [1] = LAYOUT_voyager(
@@ -186,8 +185,6 @@ bool rgb_matrix_indicators_user(void) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case MAC_LOCK:
-      HCS(0x19E);
 
     case RGB_SLD:
       if (record->event.pressed) {
