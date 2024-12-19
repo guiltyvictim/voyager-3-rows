@@ -1,4 +1,3 @@
-#define UK_QUOT KC_QUOT
 #define UK_AT S(KC_QUOT)
 #define UK_PND S(KC_3)
 #define UK_HASH KC_NUHS
