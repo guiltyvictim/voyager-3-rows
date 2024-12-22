@@ -55,8 +55,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [5] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_NO,          KC_NO,          LALT(LCTL(LSFT(KC_4))),LALT(LCTL(LSFT(KC_5))),LALT(LCTL(LSFT(KC_6))),MAC_DND,                                        KC_NO,          QK_BOOT,        RGB_VAI,        RGB_VAD,        KC_NO,          KC_NO,          
-    KC_NO,          KC_NO,          LALT(LCTL(LSFT(KC_1))),LALT(LCTL(LSFT(KC_2))),LALT(LCTL(LSFT(KC_3))),MAC_LOCK,                                       KC_NO,          TO(8),          TO(1),          TO(0),          KC_NO,          KC_NO,          
+    KC_NO,          KC_NO,          LALT(LGUI(LCTL(LSFT(KC_4)))),LALT(LGUI(LCTL(LSFT(KC_5)))),LALT(LGUI(LCTL(LSFT(KC_6)))),MAC_DND,                                        KC_NO,          QK_BOOT,        RGB_VAI,        RGB_VAD,        KC_NO,          KC_NO,          
+    KC_NO,          KC_NO,          LALT(LGUI(LCTL(LSFT(KC_1)))),LALT(LGUI(LCTL(LSFT(KC_2)))),LALT(LGUI(LCTL(LSFT(KC_3)))),MAC_LOCK,                                       KC_NO,          TO(8),          TO(1),          TO(0),          KC_NO,          KC_NO,          
     KC_NO,          KC_NO,          KC_F16,         LCTL(KC_UP),    LCTL(KC_DOWN),  KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          
                                                     LALT(LCTL(LSFT(KC_ENTER))),LALT(LGUI(LCTL(LSFT(KC_ENTER)))),                                KC_TRANSPARENT, KC_DELETE
   ),
