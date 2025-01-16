@@ -343,7 +343,7 @@ __attribute__((weak)) uint16_t achordion_timeout(uint16_t tap_hold_keycode) {
   switch (tap_hold_keycode) {
     case LT(2,KC_ESCAPE):
     case LT(3,KC_BSPC):
-    case LT_REP:
+    case LT(5, KC_0):
     case LT(4,KC_SPACE):
     case LT(7,KC_C):
     case LT(7,KC_M):
