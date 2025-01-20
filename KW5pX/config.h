@@ -21,7 +21,7 @@
 #undef MOUSEKEY_WHEEL_MAX_SPEED
 #define MOUSEKEY_WHEEL_MAX_SPEED 16
 
-#define SERIAL_NUMBER "KW5pX/OaRzxr"
+#define SERIAL_NUMBER "KW5pX/MawpmY"
 #define LAYER_STATE_16BIT
 #define COMBO_COUNT 1
 #define HSS(report) host_system_send(record->event.pressed ? report : 0); return false
