@@ -524,7 +524,7 @@ uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
     switch (keycode) {
         case KC_U: return KC_E;  // For "ED" bigram.
         case KC_P: return KC_H;  // For "DE" bigram.
-        case KC_M: return KC_B;  // For "CE" bigram.
+        case LT(7,KC_M): return KC_B;  // For "CE" bigram.
     }
 
     return KC_TRNS;
