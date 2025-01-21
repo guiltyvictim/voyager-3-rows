@@ -231,9 +231,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case LT_REP:  // NAV layer on hold, Repeat Key on tap.
       if (record->tap.count) {  // On tap.
         if (get_mods() == MOD_BIT(KC_LSFT)) {
-          uint8_t temp_mods = get_mods();
           clear_mods();
-          set_mods(temp_mods);
           alt_repeat_key_invoke(&record->event);  // Alternate the last key.
           return false; 
         } else {
