@@ -231,7 +231,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case LT_REP:  // NAV layer on hold, Repeat Key on tap.
       if (record->tap.count) {  // On tap.
         if (get_mods() == MOD_BIT(KC_LSFT)) {
-          clear_mods();
           alt_repeat_key_invoke(&record->event);  // Alternate the last key.
           return false; 
         } else {
@@ -521,6 +520,7 @@ void matrix_scan_user(void) {
 
 
 uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
+    clear_mods();
     switch (keycode) {
         case KC_U: return KC_E;  // For "ED" bigram.
         case KC_P: return KC_H;  // For "DE" bigram.
