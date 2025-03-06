@@ -5,6 +5,12 @@
 #define TAPPING_TERM_PER_KEY
 #define LT_REP LT(5, KC_0)
 
+bool remember_last_key_user(uint16_t keycode, keyrecord_t* record,
+                            uint8_t* remembered_mods) {
+  if (keycode == LT_REP) { return false; }
+  return true;
+}
+
 enum custom_keycodes {
   RGB_SLD = ML_SAFE_RANGE,
   ST_MACRO_0,
@@ -118,7 +124,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case LT(4,KC_SPACE):
         case LT(7,KC_C):
         case LT(7,KC_M):
-            return 0;
+            return TAPPING_TERM - 50;
         case TD(DANCE_1):
             return TAPPING_TERM + 40;
         default:
