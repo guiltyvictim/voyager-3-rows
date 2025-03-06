@@ -10,6 +10,5 @@ COMBO_ENABLE = yes
 
 
 
-SRC += features/achordion.c
 KEY_OVERRIDE_ENABLE = yes
 REPEAT_KEY_ENABLE = yes
