@@ -112,6 +112,13 @@ combo_t key_combos[COMBO_COUNT] = {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case LT(2,KC_ESCAPE):
+        case LT(3,KC_BSPC):
+        case LT(5, KC_0):
+        case LT(4,KC_SPACE):
+        case LT(7,KC_C):
+        case LT(7,KC_M):
+            return 0;
         case TD(DANCE_1):
             return TAPPING_TERM + 40;
         default:
@@ -540,19 +547,6 @@ tap_dance_action_t tap_dance_actions[] = {
 
 
 
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case LT(2,KC_ESCAPE):
-        case LT(3,KC_BSPC):
-        case LT(5, KC_0):
-        case LT(4,KC_SPACE):
-        case LT(7,KC_C):
-        case LT(7,KC_M):
-            return 0;
-        default:
-            return TAPPING_TERM;
-    }
-}
 
 uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
     switch (keycode) {
