@@ -1,8 +1,4 @@
-/*
-  Set any config.h overrides for your specific keymap here.
-  See config.h options at https://docs.qmk.fm/#/config_options?id=the-configh-file
-*/
-
+#define CHORDAL_HOLD
 #undef TAPPING_TERM
 #define TAPPING_TERM 160
 
@@ -21,7 +17,7 @@
 #undef MOUSEKEY_WHEEL_MAX_SPEED
 #define MOUSEKEY_WHEEL_MAX_SPEED 16
 
-#define SERIAL_NUMBER "xP0zY/zLoLxd"
+#define SERIAL_NUMBER "xP0zY/JaaLYZ"
 #define LAYER_STATE_16BIT
 #define COMBO_COUNT 1
 #define HSS(report) host_system_send(record->event.pressed ? report : 0); return false
