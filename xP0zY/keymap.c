@@ -2,6 +2,7 @@
 #include "version.h"
 #define MOON_LED_LEVEL LED_LEVEL
 #define ML_SAFE_RANGE SAFE_RANGE
+#define TAPPING_TERM_PER_KEY
 #define LT_REP LT(5, KC_0)
 
 enum custom_keycodes {
@@ -552,6 +553,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM;
     }
 }
+
 uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
     switch (keycode) {
         case KC_U: return KC_E;  // For "ED" bigram.
