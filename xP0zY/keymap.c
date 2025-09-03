@@ -27,7 +27,15 @@ enum custom_keycodes {
   NAVIGATOR_AIM
 };
 
-
+enum tap_dance_codes {
+  DANCE_0,
+  DANCE_1,
+  DANCE_2,
+  DANCE_3,
+  DANCE_4,
+  DANCE_5,
+  DANCE_6,
+};
 
 #define DUAL_FUNC_0 LT(6, KC_B)
 #define DUAL_FUNC_1 LT(15, KC_3)
